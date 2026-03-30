@@ -1,0 +1,11 @@
+{
+    "firstname": "Pradiksh",
+    "lastname": "Soman",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2023-05-27",
+        "checkout": "2025-05-23"
+    },
+    "additionalneeds": "Bed"
+}
