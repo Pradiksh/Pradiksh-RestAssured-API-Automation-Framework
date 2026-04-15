@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/Pradiksh Soman/IdeaProjects/RestAssured_API_Automation_Framework/src/test/java/com/testautomation/apitesting/tests/EndToEndAPITest.java"><classes><class name="com.testautomation.apitesting.tests.EndToEndAPITest"><methods><include name="DeleteApiRequest"/></methods></class></classes></test></suite>
