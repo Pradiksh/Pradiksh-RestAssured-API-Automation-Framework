@@ -34,17 +34,14 @@ Response response =
 
        JSONArray jsonarrayFirstName =  JsonPath.read(response.body().asString(),"$.booking..firstname");
      String firstname = (String) jsonarrayFirstName.get(0);
-
      Assert.assertEquals(firstname,"Pradiksh");
 
      JSONArray jsonarrayLastName = JsonPath.read(response.body().asString(),"$.booking..lastname");
      String lastname = (String)jsonarrayLastName.get(0);
-
      Assert.assertEquals(lastname,"Soman");
 
      JSONArray jsonarraycheckin = JsonPath.read(response.body().asString(),"$.booking.bookingdates..checkin");
      String checkin = (String)jsonarraycheckin.get(0);
-
      Assert.assertEquals(checkin,"2023-05-27");
 
      int bookingId = JsonPath.read(response.body().asString(),"$.bookingid");
