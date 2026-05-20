@@ -7,16 +7,24 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.Logger;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
+
+import org.apache.logging.log4j.LogManager;
+
+
 
 import java.io.File;
 import java.io.IOException;
 
-public class EndToEndAPITest extends BaseTest {
-    @Test
-    public void DeleteApiRequest(){
 
+public class EndToEndAPITest extends BaseTest {
+    private static final Logger logger = LogManager.getLogger(EndToEndAPITest.class);
+    @Test
+    public void End2EndApiRequest(){
+
+logger.info("End2EndApiRequest test execution started....");
         try {
             String ReqBody = FileUtils.readFileToString(new File(FileNameConstants.Post_API_Request_Body),"UTF-8");
 
@@ -85,7 +93,7 @@ public class EndToEndAPITest extends BaseTest {
                     .put("/{bookingId}", bookingId)
                     .then()
                     .assertThat()
-                    .statusCode(200)
+                    .statusCode(100)
                     .body("firstname", Matchers.equalTo("Pradiksh"))
                     .body("lastname", Matchers.equalTo("Soman"));
 
@@ -124,6 +132,6 @@ public class EndToEndAPITest extends BaseTest {
             throw new RuntimeException(e);
         }
 
-
+        logger.info("End2EndApiRequest test execution ended....");
     }
 }
