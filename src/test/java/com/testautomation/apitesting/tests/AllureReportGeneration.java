@@ -4,25 +4,27 @@ import com.jayway.jsonpath.JsonPath;
 import com.testautomation.apitest.utils.BaseTest;
 import com.testautomation.apitest.utils.FileNameConstants;
 import com.testautomation.apitesting.Listener.RestAssuredListener;
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
-import org.apache.logging.log4j.LogManager;
-
-
-
 import java.io.File;
 import java.io.IOException;
 
-
-public class EndToEndAPITest extends BaseTest {
-    private static final Logger logger = LogManager.getLogger(EndToEndAPITest.class);
-    @Test
+@Epic("Epic - 01")
+@Feature("Create Update Delete Booking")
+public class AllureReportGeneration extends BaseTest {
+    private static final Logger logger = LogManager.getLogger(AllureReportGeneration.class);
+    @Story("Story 1")
+    @Test(description = "end to end api testing")
+    @Description("end to end testing")
+    @Severity(SeverityLevel.CRITICAL)
     public void End2EndApiRequest(){
 
 logger.info("End2EndApiRequest test execution started....");

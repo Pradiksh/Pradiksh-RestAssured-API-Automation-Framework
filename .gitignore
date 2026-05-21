@@ -1,4 +1,8 @@
 target/
+allure-results/
+allure-report/
+allure-report-apphome/
+allure-results-backup-*/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
