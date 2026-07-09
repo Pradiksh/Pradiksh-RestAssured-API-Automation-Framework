@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-09T10:34:08 IST" name="Suite1" finished-at="2026-07-09T10:34:21 IST" duration-ms="12355">
+  <suite started-at="2026-07-09T11:36:49 IST" name="Suite1" finished-at="2026-07-09T11:36:58 IST" duration-ms="8791">
     <groups>
     </groups>
-    <test started-at="2026-07-09T10:34:08 IST" name="TestName" finished-at="2026-07-09T10:34:21 IST" duration-ms="12355">
+    <test started-at="2026-07-09T11:36:49 IST" name="TestName" finished-at="2026-07-09T11:36:58 IST" duration-ms="8791">
       <class name="com.testautomation.apitesting.tests.EndToEndAPITest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@2f1de2d6]" started-at="2026-07-09T10:34:08 IST" name="beforeMethod" finished-at="2026-07-09T10:34:09 IST" duration-ms="478" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae]" started-at="2026-07-09T11:36:49 IST" name="beforeMethod" finished-at="2026-07-09T11:36:49 IST" duration-ms="260" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="End2EndApiRequest()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@2f1de2d6]" started-at="2026-07-09T10:34:09 IST" name="End2EndApiRequest" finished-at="2026-07-09T10:34:21 IST" duration-ms="11695" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae]" started-at="2026-07-09T11:36:49 IST" name="beforeMethod" finished-at="2026-07-09T11:36:49 IST" duration-ms="260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae]" started-at="2026-07-09T11:36:49 IST" name="beforeMethod" finished-at="2026-07-09T11:36:49 IST" duration-ms="260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="End2EndApiRequest3()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae]" started-at="2026-07-09T11:36:49 IST" name="End2EndApiRequest3" finished-at="2026-07-09T11:36:49 IST" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- End2EndApiRequest3 -->
+        <test-method signature="End2EndApiRequest2()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae]" started-at="2026-07-09T11:36:49 IST" name="End2EndApiRequest2" finished-at="2026-07-09T11:36:49 IST" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- End2EndApiRequest2 -->
+        <test-method signature="End2EndApiRequest()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae]" started-at="2026-07-09T11:36:49 IST" name="End2EndApiRequest" finished-at="2026-07-09T11:36:58 IST" duration-ms="8425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- End2EndApiRequest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@2f1de2d6]" started-at="2026-07-09T10:34:21 IST" name="afterMethod" finished-at="2026-07-09T10:34:21 IST" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae]" started-at="2026-07-09T11:36:49 IST" name="afterMethod" finished-at="2026-07-09T11:36:49 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=End2EndApiRequest status=SUCCESS method=EndToEndAPITest.End2EndApiRequest()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@2f1de2d6] output={null}]]]>
+                <![CDATA[[TestResult name=End2EndApiRequest2 status=SUCCESS method=EndToEndAPITest.End2EndApiRequest2()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae]" started-at="2026-07-09T11:36:49 IST" name="afterMethod" finished-at="2026-07-09T11:36:49 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=End2EndApiRequest3 status=SUCCESS method=EndToEndAPITest.End2EndApiRequest3()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae]" started-at="2026-07-09T11:36:58 IST" name="afterMethod" finished-at="2026-07-09T11:36:58 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=End2EndApiRequest status=SUCCESS method=EndToEndAPITest.End2EndApiRequest()[pri:0, instance:com.testautomation.apitesting.tests.EndToEndAPITest@51c929ae] output={null}]]]>
               </value>
             </param>
           </params>

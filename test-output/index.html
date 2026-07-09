@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,16 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite1" title="com.testautomation.apitesting.tests.EndToEndAPITest" class="method navigator-link" hash-for-method="End2EndApiRequest">End2EndApiRequest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="com.testautomation.apitesting.tests.EndToEndAPITest" class="method navigator-link" hash-for-method="End2EndApiRequest2">End2EndApiRequest2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="com.testautomation.apitesting.tests.EndToEndAPITest" class="method navigator-link" hash-for-method="End2EndApiRequest3">End2EndApiRequest3</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite1 -->
@@ -131,6 +141,20 @@
                   <span class="method-name">End2EndApiRequest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="End2EndApiRequest2">
+                  </a> <!-- End2EndApiRequest2 -->
+                  <span class="method-name">End2EndApiRequest2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="End2EndApiRequest3">
+                  </a> <!-- End2EndApiRequest3 -->
+                  <span class="method-name">End2EndApiRequest3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite1-class-passed -->
         </div> <!-- panel Suite1 -->
@@ -147,6 +171,8 @@
       &lt;class name=&quot;com.testautomation.apitesting.tests.EndToEndAPITest&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;End2EndApiRequest&quot;/&gt;
+          &lt;include name=&quot;End2EndApiRequest2&quot;/&gt;
+          &lt;include name=&quot;End2EndApiRequest3&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.testautomation.apitesting.tests.EndToEndAPITest --&gt;
     &lt;/classes&gt;
@@ -188,16 +214,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'End2EndApiRequest')
 data.setCell(0, 2, 'com.testautomation.apitesting.tests.EndToEndAPITest')
-data.setCell(0, 3, 11695);
+data.setCell(0, 3, 8425);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'End2EndApiRequest3')
+data.setCell(1, 2, 'com.testautomation.apitesting.tests.EndToEndAPITest')
+data.setCell(1, 3, 33);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'End2EndApiRequest2')
+data.setCell(2, 2, 'com.testautomation.apitesting.tests.EndToEndAPITest')
+data.setCell(2, 3, 32);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -228,13 +262,37 @@ return data;
                 <span class="method-name">beforeMethod</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">End2EndApiRequest3</span>
+                <span class="method-start">330 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">End2EndApiRequest2</span>
+                <span class="method-start">330 ms</span>
+              </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">End2EndApiRequest</span>
-                <span class="method-start">552 ms</span>
+                <span class="method-start">330 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=End2EndApiRequest2 status=SUCCESS method=EndToEndAPITest.End2EndApiRequest2()[pri:0...)</span>
+                <span class="method-start">376 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=End2EndApiRequest3 status=SUCCESS method=EndToEndAPITest.End2EndApiRequest3()[pri:0...)</span>
+                <span class="method-start">376 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=End2EndApiRequest status=SUCCESS method=EndToEndAPITest.End2EndApiRequest()[pri:0, ...)</span>
-                <span class="method-start">12262 ms</span>
+                <span class="method-start">8758 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -6,6 +6,8 @@
       <class name="com.testautomation.apitesting.tests.EndToEndAPITest">
         <methods>
           <include name="End2EndApiRequest"/>
+          <include name="End2EndApiRequest2"/>
+          <include name="End2EndApiRequest3"/>
         </methods>
       </class> <!-- com.testautomation.apitesting.tests.EndToEndAPITest -->
     </classes>
