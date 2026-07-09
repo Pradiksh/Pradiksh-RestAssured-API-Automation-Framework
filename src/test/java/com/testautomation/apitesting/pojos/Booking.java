@@ -7,11 +7,11 @@ public class Booking {
     private int totalprice;
     private boolean depositpaid;
     private BookingDates bookingdates;
-
+//constructor
     public Booking() {
 
     }
-
+//parameterized constructor
     public Booking(String fname,String lname,String aneeds,
                    int tprice,boolean dpaid,BookingDates bdates) {
 
@@ -60,14 +60,17 @@ public class Booking {
     }
 
     public void setDepositpaid(boolean depositpaid) {
+
         this.depositpaid = depositpaid;
     }
 
     public BookingDates getBookingdates() {
+
         return bookingdates;
     }
 
     public void setBookingdates(BookingDates bookingdates) {
+
         this.bookingdates = bookingdates;
     }
 

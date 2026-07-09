@@ -56,7 +56,6 @@ public class DataDrivenTestingUsingJsonFile {
         Object[] obj = new Object[jsonArray.size()];
         for (int i = 0; i < obj.length; i++) {
             obj[i] = jsonArray.get(i);
-
         }
         return obj;
     }
