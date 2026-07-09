@@ -1,5 +1,10 @@
 package com.testautomation.apitesting.tests;
 
+import com.codoid.products.exception.FilloException;
+import com.codoid.products.fillo.Connection;
+import com.codoid.products.fillo.Fillo;
+import com.codoid.products.fillo.Recordset;
+import com.testautomation.apitest.utils.FileNameConstants;
 import org.testng.TestNG;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlInclude;
@@ -37,7 +42,36 @@ public class CreateDynamicTestNGSuiteFile {
 
         // Add all test methods
         List<XmlInclude> allMethods = new ArrayList<XmlInclude>();
-        allMethods.add(new XmlInclude("End2EndApiRequest"));
+
+//
+//        allMethods.add(new XmlInclude("End2EndApiRequest"));
+//        allMethods.add(new XmlInclude("End2EndApiRequest2"));
+//        allMethods.add(new XmlInclude("End2EndApiRequest3"));
+
+        //Doing the same via Excel file using fillo
+
+        Fillo fillo = new Fillo();
+
+        Recordset recorsdset = null;
+        Connection connection = null;
+
+        try {
+            connection = fillo.getConnection(FileNameConstants.Test_Runner);
+
+            String Query = "Select * from Sheet1";
+            recorsdset = connection.executeQuery(Query);
+
+            while(recorsdset.next()){
+                if(recorsdset.getField("Run").equals("Yes")){
+                    allMethods.add(new XmlInclude(recorsdset.getField("TestMethod")));
+                }
+            }
+
+        } catch (FilloException e) {
+            throw new RuntimeException(e);
+        }
+
+
         xmlClass.setIncludedMethods(allMethods);
         xmlTest.getClasses().add(xmlClass);
 
