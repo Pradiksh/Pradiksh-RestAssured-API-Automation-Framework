@@ -76,9 +76,11 @@ public class PutAPIRequest {
                     .given()
                     .contentType(ContentType.JSON)
                     .body(PutAPIReqBody)
+                    //for put request need to specify token in  headers
                     .header("Cookie","token="+token)
                     .baseUri("https://restful-booker.herokuapp.com/booking")
                     .when()
+                    //For put request need to specifiy booking id
                     .put("/{bookingId}", bookingId)
                     .then()
                     .assertThat()

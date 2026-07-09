@@ -123,6 +123,7 @@ logger.info("End2EndApiRequest test execution started....");
                     .given()
                     .filter(new RestAssuredListener())
                     .contentType(ContentType.JSON)
+                    // We pass token as header for delete
                     .header("Cookie","token="+token)
                     .baseUri("https://restful-booker.herokuapp.com/booking")
                     .when()

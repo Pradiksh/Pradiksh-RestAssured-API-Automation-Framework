@@ -29,6 +29,7 @@ public class PostAPIRequestUsingPojos {
             Booking booking = new Booking("api testing", "tutorial", "breakfast", 1000, true, bookingDates);
 
             //serialization
+            //Object mapper's object is important for serialization and deserialization
             ObjectMapper objectMapper = new ObjectMapper();
             String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(booking);
             System.out.println(requestBody);
@@ -56,7 +57,7 @@ Response response =
                     .response();
 
             int bookingId = response.path("bookingid");
-            System.out.println(JsonSchema);
+           // System.out.println(JsonSchema);
 
             RestAssured
                     .given()

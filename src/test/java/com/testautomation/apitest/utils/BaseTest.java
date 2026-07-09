@@ -12,10 +12,12 @@ import java.io.StringWriter;
 
 
 public class BaseTest {
-    private static final Logger logger = LogManager.getLogger(BaseTest.class);
-    @BeforeMethod
 
+    private static final Logger logger = LogManager.getLogger(BaseTest.class);
+
+    @BeforeMethod
     public void beforeMethod(){
+//This logs the failure response in the console output
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
     }
 
