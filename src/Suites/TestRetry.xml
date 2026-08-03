@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Pradiksh Soman/IdeaProjects/Pradiksh-RestAssured-API-Automation-Framework/src/test/java/com/testautomation/apitesting/tests/TestRetry.java">
+        <classes>
+            <class name="com.testautomation.apitesting.tests.TestRetry">
+                <methods>
+                    <include name="End2EndApiRequest"/>
+                    <include name="End2EndApiRequest2"/>
+                    <include name="End2EndApiRequest3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.testautomation.apitesting.Listener.AnnotationTransformerimpl"></listener>
+    </listeners>
+</suite>
