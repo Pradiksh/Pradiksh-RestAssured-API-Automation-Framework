@@ -3,9 +3,8 @@ package com.testautomation.apitesting.tests;
 import com.jayway.jsonpath.JsonPath;
 import com.testautomation.apitest.utils.BaseTest;
 import com.testautomation.apitest.utils.FileNameConstants;
+import com.testautomation.apitest.utils.RestApiHelper;
 import com.testautomation.apitesting.Listener.RestAssuredListener;
-import dev.failsafe.Failsafe;
-import dev.failsafe.RetryPolicy;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -13,32 +12,27 @@ import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hamcrest.Matchers;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
 
 
-public class StepsRetry extends BaseTest {
-    private static final Logger logger = LogManager.getLogger(StepsRetry.class);
+public class CreateApiRequestBodyDynamic extends BaseTest {
+    private static final Logger logger = LogManager.getLogger(CreateApiRequestBodyDynamic.class);
     @Test
     public void End2EndApiRequest(){
 
 logger.info("End2EndApiRequest test execution started....");
         try {
-            String ReqBody = FileUtils.readFileToString(new File(FileNameConstants.Post_API_Request_Body),"UTF-8");
+            String ReqBody = FileUtils.readFileToString(new File(FileNameConstants.Post_API_Request_Body_Dynamic),"UTF-8");
 
             String TokenReqBody = FileUtils.readFileToString(new File(FileNameConstants.Token_API_Request_Body),"UTF-8");
 
             String PutAPIReqBody = FileUtils.readFileToString(new File(FileNameConstants.Put_API_Request_Body),"UTF-8");
 
             String PatchAPIreqBody = FileUtils.readFileToString(new File(FileNameConstants.Patch_API_Request_Body),"UTF-8");
-          RetryPolicy<Object>retryPolicy =  RetryPolicy.builder().withDelay(Duration.ofSeconds(1)).withMaxRetries(3)
-                    .onRetry(event -> logger.info("First name is not matching..."))
-                    .onFailure(e->logger.info("First name not matched"))
-                    .build();
+            String DynamicReqBody = RestApiHelper.prepareAPIRequestDynamically(ReqBody,"Niko","Simba","Chicken");
 
             //POstAPIRequest
             Response response =
@@ -46,7 +40,7 @@ logger.info("End2EndApiRequest test execution started....");
                             .given()
                             .filter(new RestAssuredListener())
                             .contentType(ContentType.JSON)
-                            .body(ReqBody)
+                            .body(DynamicReqBody)
                             .baseUri("https://restful-booker.herokuapp.com/booking")
                             .when()
                             .post()
@@ -57,11 +51,6 @@ logger.info("End2EndApiRequest test execution started....");
                             .response();
 
             int bookingId = JsonPath.read(response.body().asString(),"$.bookingid");
-            String firstname = JsonPath.read(
-                    response.body().asString(),
-                    "$.booking.firstname");
-            Failsafe.with(retryPolicy).run(()-> Assert.assertEquals(firstname,"Pradiksh"));
-
 
             //Get APIRequest
             RestAssured
@@ -109,7 +98,6 @@ logger.info("End2EndApiRequest test execution started....");
                     .then()
                     .assertThat()
                     .statusCode(200)
-
                     .body("firstname", Matchers.equalTo("Pradiksh"))
                     .body("lastname", Matchers.equalTo("Soman"));
 
@@ -127,7 +115,6 @@ logger.info("End2EndApiRequest test execution started....");
                     .then()
                     .assertThat()
                     .statusCode(200)
-
                     .body("firstname", Matchers.equalTo("Niko"));
             //Delete API Request
 
